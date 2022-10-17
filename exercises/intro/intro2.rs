@@ -2,8 +2,12 @@
 // Make the code print a greeting to the world.
 // Execute `rustlings hint intro2` or use the `hint` watch subcommand for a hint.
 
-// I AM NOT DONE
+use std::io;
 
 fn main() {
-    println!("Hello {}!");
+    let mut username = String::new();
+    io::stdin()
+        .read_line(&mut username)
+        .expect("failed to read name");
+    println!("Hello {username}!");
 }
